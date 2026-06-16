@@ -115,7 +115,7 @@ def plugin_installed(sandbox, client):
         "install",
         "--quiet",
         "--break-system-packages",
-        "stashapi>=0.1.5",
+        "stashapp-tools",
     )
     client.reload_plugins()
     return True

@@ -1,2 +1,2 @@
-stashapi>=0.1.5
+stashapp-tools
 Pillow>=10.0.0

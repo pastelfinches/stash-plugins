@@ -69,7 +69,7 @@ def _pip_install(
 
 
 def _install_deps_via_pip() -> None:
-    _pip_install(sys.executable, ["Pillow>=10.0.0", "stashapi>=0.1.5"])
+    _pip_install(sys.executable, ["Pillow>=10.0.0", "stashapp-tools"])
 
 
 def _deps_already_importable() -> bool:
@@ -102,7 +102,7 @@ def _ensure_deps() -> None:
             # Pillow's pip name differs from its import name (PIL), so
             # declare both. Without this, PDM "installs" the package but
             # the subsequent `from PIL import Image` still fails.
-            ensure_import("PIL:Pillow>=10.0.0", "stashapi>=0.1.5")
+            ensure_import("PIL:Pillow>=10.0.0", "stashapi:stashapp-tools")
             if _deps_already_importable():
                 return
         except Exception:  # noqa: BLE001 — fall through to pip

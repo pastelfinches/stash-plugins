@@ -91,12 +91,12 @@ def _ensure_deps() -> None:
         ensure_import = None
     if ensure_import is not None:
         try:
-            ensure_import("stashapi>=0.1.5")
+            ensure_import("stashapi:stashapp-tools")
             if _deps_already_importable():
                 return
         except Exception:  # noqa: BLE001
             pass
-    _pip_install(sys.executable, ["stashapi>=0.1.5"])
+    _pip_install(sys.executable, ["stashapp-tools"])
 
 
 try:
